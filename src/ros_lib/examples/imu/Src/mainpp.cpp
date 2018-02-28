@@ -31,12 +31,12 @@ class SPI_Mem{
 public:
   unsigned short int chip;
   short data_num;
-  std::shared_ptr<uint8_t>data;
+  std::unique_ptr<uint8_t[], std::default_delete<uint8_t[]> >data;
   void (*callback)(uint8_t dat[]);
 
   // send message
   SPI_Mem(unsigned short int chip_, uint8_t address_, short num_, const uint8_t data_[])
-    : chip(chip_), data_num(num_), data(std::make_shared<uint8_t>(1+num_)), callback(NULL)
+    : chip(chip_), data_num(num_), data(new uint8_t[1+num_]), callback(NULL)
   {
     uint8_t *dat = data.get();
     dat[0] = address_;
@@ -45,30 +45,18 @@ public:
 
   // receive message
   SPI_Mem(unsigned short int chip_, uint8_t address_, void (*callback_)(uint8_t dat[]), short num_)
-    : chip(chip_), data_num(num_), data(std::make_shared<uint8_t>(1+num_)), callback(callback_)
+    : chip(chip_), data_num(num_), data(new uint8_t[1+num_]), callback(callback_)
   {
     uint8_t *dat = data.get();
     dat[0] = address_;
-    memset(&(dat[1]), 0xff, num_+1);
+    memset(&(dat[1]), 0xff, num_);
   }
 
-  virtual ~SPI_Mem(){ }
-  SPI_Mem(const SPI_Mem& mem)
-    : chip(mem.chip), data_num(mem.data_num), data(std::make_shared<uint8_t>(1+mem.data_num)), callback(mem.callback)
-  { data = mem.data; }
-
-  SPI_Mem& Copy(const SPI_Mem& mem)
-  {
-    if(this == &mem){ return *this; }
-    data = mem.data;
-    return *this;
-  }
-
-  SPI_Mem& operator =(const SPI_Mem& mem){ return Copy(mem); }
+  virtual ~SPI_Mem(){}
 };
 
 volatile bool flag_transmit = false;
-std::queue<std::shared_ptr<SPI_Mem>>spiq;
+std::queue<std::unique_ptr<SPI_Mem>>spiq;
 uint8_t rbuf[64];
 
 
@@ -83,12 +71,12 @@ void SPI_Mem_Transmit(void){
 }
 
 void SPI_Mem_Write(unsigned short int chip, uint8_t address, short num, const uint8_t data[]){
-  spiq.push(std::make_shared<SPI_Mem>(chip, address, num, data));
+  spiq.push(std::unique_ptr<SPI_Mem>(new SPI_Mem(chip, address, num, data)));
   SPI_Mem_Transmit();
 }
 
 void SPI_Mem_Read(unsigned short int chip, uint8_t address, void (*callback)(uint8_t dat[]), short num){
-  spiq.push(std::make_shared<SPI_Mem>(chip, address | 0x80, callback, num));
+  spiq.push(std::unique_ptr<SPI_Mem>(new SPI_Mem(chip, address | 0x80, callback, num)));
   SPI_Mem_Transmit();
 }
 
