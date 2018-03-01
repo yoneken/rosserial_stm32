@@ -2,10 +2,10 @@
 The basic example for rosserial_stm32
 
 ## HAL
-- [STM32CubeMX](http://www.st.com/ja/development-tools/stm32cubemx.html)
+- [STM32CubeMX](http://www.st.com/en/development-tools/stm32cubemx.html)
 
 ## Target board
-- [Nucleo-F303K8(STM32F303)](http://www.st.com/ja/evaluation-tools/nucleo-f303k8.html)
+- [Nucleo-F303K8(STM32F303)](http://www.st.com/en/evaluation-tools/nucleo-f303k8.html)
 
 ## Using Peripherals
 - USART2 (through DMA)

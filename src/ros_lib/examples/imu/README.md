@@ -1,10 +1,10 @@
 # IMU (an example for rosserial_stm32)
 
 ## HAL
-- [STM32CubeMX](http://www.st.com/ja/development-tools/stm32cubemx.html)
+- [STM32CubeMX](http://www.st.com/en/development-tools/stm32cubemx.html)
 
 ## Target board
-- [Nucleo-F303K8(STM32F303)](http://www.st.com/ja/evaluation-tools/nucleo-f303k8.html)
+- [Nucleo-F303K8(STM32F303)](http://www.st.com/en/evaluation-tools/nucleo-f303k8.html)
 
 ## Device
 - [MPU9250/9255 Breakout](http://tinkersphere.com/sensors/1875-9dof-accelerometer-gyro-magnetometer-breakout-mpu-9250.html)

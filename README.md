@@ -4,7 +4,7 @@
 This is a part of [rosserial](https://github.com/ros-drivers/rosserial) repository to communicate with ROS system through a USART for STM32 embedded system.
 
 ## Limitation
-Currently, this code is focused on STM32F3xx series and it uses the [STM32CubeMX HAL](http://www.st.com/ja/development-tools/stm32cubemx.html).  
+Currently, this code is focused on STM32F3xx series and it uses the [STM32CubeMX HAL](http://www.st.com/en/development-tools/stm32cubemx.html).  
 If you use the package for other series, please edit src/ros_lib/STM32Hardware.h .  
 After that, we appreciate you sharing your code :)  
 
