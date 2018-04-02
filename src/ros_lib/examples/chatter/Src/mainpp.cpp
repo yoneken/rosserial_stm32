@@ -19,6 +19,10 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart){
   nh.getHardware()->flush();
 }
 
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+  nh.getHardware()->reset_rbuf();
+}
+
 void setup(void)
 {
   nh.initNode();
