@@ -26,6 +26,10 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart){
   nh.getHardware()->flush();
 }
 
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+  nh.getHardware()->reset_rbuf();
+}
+
 void HAL_I2C_MemRxCpltCallback(I2C_HandleTypeDef *hi2c){
   thermo.publish(&img);
   flag = false;

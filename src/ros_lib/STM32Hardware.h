@@ -66,9 +66,13 @@ class STM32Hardware {
     }
   
     void init(){
-      HAL_UART_Receive_DMA(huart, rbuf, rbuflen);
+      reset_rbuf();
 
       HAL_TIM_Base_Start(htim);
+    }
+
+    void reset_rbuf(void){
+      HAL_UART_Receive_DMA(huart, rbuf, rbuflen);
     }
 
     int read(){
