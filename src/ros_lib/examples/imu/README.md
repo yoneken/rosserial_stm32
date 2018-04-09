@@ -15,11 +15,11 @@
 - SPI1 (through DMA)
 
 ## Wire
-|Name    |Nucreo board|STM32F303(LQFP32)|MPU9250 board|MPU9250    |
-|--------|------------|-----------------|-------------|-----------|
-|Vin (5V)|CN4-P4      |                 |VIN          |           |
-|GND     |CN4-P2      |VSS(16, 32)      |GND          |GND(18)    |
-|MOSI    |CN4-P6      |PA7(20)          |SDA          |SDI(24)    |
-|MISO    |CN4-P7      |PA6(21)          |AD0          |SDO(9)     |
-|SCLK    |CN4-P8      |PA5(22)          |SCL          |SCLK(23)   |
-|CS      |CN4-P9      |PA4(23)          |NCS          |nCS(22)    |
+|Name      |Nucreo board|STM32F303(LQFP32)|MPU9250 board|MPU9250    |
+|----------|------------|-----------------|-------------|-----------|
+|Vin (3.3V)|CN4-P14     |                 |VIN          |           |
+|GND       |CN4-P2      |VSS(16, 32)      |GND          |GND(18)    |
+|MOSI      |CN4-P6      |PA7(20)          |SDA          |SDI(24)    |
+|MISO      |CN4-P7      |PA6(21)          |AD0          |SDO(9)     |
+|SCLK      |CN4-P8      |PA5(22)          |SCL          |SCLK(23)   |
+|CS        |CN4-P9      |PA4(23)          |NCS          |nCS(22)    |
