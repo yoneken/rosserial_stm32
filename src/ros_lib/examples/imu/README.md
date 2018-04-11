@@ -22,4 +22,5 @@
 |MOSI      |CN4-P6      |PA7(20)          |SDA          |SDI(24)    |
 |MISO      |CN4-P7      |PA6(21)          |AD0          |SDO(9)     |
 |SCLK      |CN4-P8      |PA5(22)          |SCL          |SCLK(23)   |
-|CS        |CN4-P9      |PA4(23)          |NCS          |nCS(22)    |
+|INT       |CN4-P9      |PA4(23)          |INT          |INT(12)    |
+|CS        |CN4-P10     |PA3(24)          |NCS          |nCS(22)    |
