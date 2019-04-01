@@ -22,3 +22,11 @@ The basic example for rosserial_stm32
 |LED2    |CN3-P2      |PA10(20)         |LED2 |
 |LED3    |CN3-P13     |PA11(21)         |LED3 |
 
+## Note
+This core requires a bit big transmit buffer.
+You have to enlarge the buffer in STM32FHardware.h like this.
+
+```
+  const static uint16_t tbuflen = 512;
+```
+
