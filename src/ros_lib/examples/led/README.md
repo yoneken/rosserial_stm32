@@ -23,7 +23,7 @@ The basic example for rosserial_stm32
 |LED3    |CN3-P13     |PA11(21)         |LED3 |
 
 ## Note
-This core requires a bit big transmit buffer.
+This code requires a bit big transmit buffer.
 You have to enlarge the buffer in STM32FHardware.h like this.
 
 ```
