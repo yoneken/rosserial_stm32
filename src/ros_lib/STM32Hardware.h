@@ -58,7 +58,7 @@ class STM32Hardware {
       huart(&huart2), rind(0), twind(0), tfind(0){
     }
 
-    STM32Hardware(TIM_HandleTypeDef *htim_, UART_HandleTypeDef *huart_):
+    STM32Hardware(UART_HandleTypeDef *huart_):
       huart(huart_), rind(0), twind(0), tfind(0){
     }
   
