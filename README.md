@@ -19,4 +19,4 @@ See src/ros_lib/examples
 ## Share your implementation based on this repo here
 _Make sure your code is working before adding your repo here ;)_
 
-[fdila's repo, working with STM32CubeIDE and stm32f7 based board](https://github.com/fdila/rosserial_stm32f7)
+[fdila's repo, working with STM32CubeIDE and stm32f7 based board, CURRENTLY NOT MAINTAINED](https://github.com/fdila/rosserial_stm32f7)
