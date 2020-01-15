@@ -15,7 +15,7 @@ $ rosrun rosserial_stm32 make_libraries.py .
 **For STM32CubeIDE users:** [You have to add /Inc directory as a "Source Location" in the project properties(C/C++ General > Paths and Symbols > Source Location).](https://github.com/yoneken/rosserial_stm32/issues/10#issuecomment-573997253)  
 
 ## Examples
-See src/ros_lib/examples  
+See [src/ros_lib/examples](https://github.com/yoneken/rosserial_stm32/tree/master/src/ros_lib/examples)  
 
 ## Share your implementation based on this repo here
 _Make sure your code is working before adding your repo here ;)_
