@@ -49,6 +49,13 @@ Then, a sample project is generated on _rosserial_stm32/src/ros_lib/examples/cha
 
 2. Build code with STM32CubeIDE on **Windows**
 
+- Open new workspace
+- Import the project as a ac6 System Workbench for STM32 project
+- Open *.ioc file with Device Configuration Tool
+- Generate codes with the tool
+- Change project type to C++ project on Eclipse
+- Build
+
 3. Launch rosseral server
 
 _Terminal 1_
