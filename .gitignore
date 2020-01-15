@@ -24,6 +24,9 @@ msg/_*.py
 # eclipse stuff
 .project
 .cproject
+.mxproject
+.metadata
+.settings
 
 # qcreator stuff
 CMakeLists.txt.user
@@ -51,3 +54,6 @@ qtcreator-*
 
 # Catkin custom files
 CATKIN_IGNORE
+
+# ROS
+.ros

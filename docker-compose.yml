@@ -1,0 +1,56 @@
+version: '3'
+
+services:
+  prepare:
+    build: .
+    image: rosserial_stm32:latest
+    command: bash -c "
+      apt update && 
+      rosdep install --from-paths src -y -r && 
+      /opt/ros/melodic/env.sh catkin b -j 2 && 
+      cd /root/catkin_ws/src/rosserial_stm32/src/ros_lib/examples/chatter/ && 
+      /root/catkin_ws/devel/env.sh rosrun rosserial_stm32 make_libraries.py ."
+    volumes:
+      - ./:/root/catkin_ws/src/rosserial_stm32
+
+  roscore:
+    build: .
+    image: rosserial_stm32:latest
+    container_name: roscore
+    command: roscore
+    volumes:
+      - .ros:/root/.ros
+  
+  srv:
+    build: .
+    image: rosserial_stm32:latest
+    container_name: srv
+    command: rosrun rosserial_python serial_node.py /dev/ttyACM0
+    volumes:
+      - .ros:/root/.ros
+    depends_on: 
+      - roscore
+    environment:
+      - "ROS_HOSTNAME=srv"
+      - "ROS_MASTER_URI=http://roscore:11311"
+    devices:
+      - "/dev/ttyACM0:/dev/ttyACM0"
+
+  client:
+    build: .
+    image: rosserial_stm32:latest
+    container_name: client
+    command: bash -c "
+      cd /root/catkin_ws/src/rosserial_stm32/src/ros_lib/examples/chatter/Debug/ &&
+      arm-none-eabi-objcopy -O binary chatter.elf chatter.bin &&
+      st-flash write chatter.bin 0x8000000 &&
+      rostopic echo /chatter"
+    volumes:
+      - .ros:/root/.ros
+      - ./:/root/catkin_ws/src/rosserial_stm32
+    environment:
+      - "ROS_HOSTNAME=client"
+      - "ROS_MASTER_URI=http://roscore:11311"
+    devices:
+      - "/dev/bus/usb:/dev/bus/usb"
+  
