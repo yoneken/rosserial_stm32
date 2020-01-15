@@ -43,5 +43,11 @@ qtcreator-*
 # Emacs
 .#*
 
+# VScode
+.vscode
+
+# Vagrant
+.vagrant
+
 # Catkin custom files
 CATKIN_IGNORE
