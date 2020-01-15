@@ -54,6 +54,7 @@ Then, a sample project is generated on _rosserial_stm32/src/ros_lib/examples/cha
 - Open *.ioc file with Device Configuration Tool
 - Generate codes with the tool
 - Change project type to C++ project on Eclipse
+- **Only STM32CubeIDE users**: Add /Inc directory to "Source Location" on project properties (C/C++ General > Paths and Symbols > Source Location)
 - Build
 
 3. Launch rosseral server
