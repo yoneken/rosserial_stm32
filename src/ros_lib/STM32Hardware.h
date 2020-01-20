@@ -35,8 +35,19 @@
 #ifndef ROS_STM32_HARDWARE_H_
 #define ROS_STM32_HARDWARE_H_
 
+#define STM32F3xx  // Change for your device
+#ifdef STM32F3xx
 #include "stm32f3xx_hal.h"
 #include "stm32f3xx_hal_uart.h"
+#endif /* STM32F3xx */
+#ifdef STM32F4xx
+#include "stm32f4xx_hal.h"
+#include "stm32f4xx_hal_uart.h"
+#endif /* STM32F4xx */
+#ifdef STM32F7xx
+#include "stm32f7xx_hal.h"
+#include "stm32f7xx_hal_uart.h"
+#endif /* STM32F7xx */
 
 extern UART_HandleTypeDef huart2;
 
@@ -47,7 +58,7 @@ class STM32Hardware {
     const static uint16_t rbuflen = 128;
     uint8_t rbuf[rbuflen];
     uint32_t rind;
-    inline uint32_t getRdmaInd(void){ return (rbuflen - huart->hdmarx->Instance->CNDTR) & (rbuflen - 1); }
+    inline uint32_t getRdmaInd(void){ return (rbuflen - __HAL_DMA_GET_COUNTER(huart->hdmarx)) & (rbuflen - 1); }
 
     const static uint16_t tbuflen = 256;
     uint8_t tbuf[tbuflen];
