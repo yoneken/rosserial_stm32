@@ -19,7 +19,14 @@ See [src/ros_lib/examples](https://github.com/yoneken/rosserial_stm32/tree/maste
 ## Share your implementation based on this repo here
 _Make sure your code is working before adding your repo here ;)_
 
-[fdila's repo, working with STM32CubeIDE and stm32f7 based board, CURRENTLY NOT MAINTAINED](https://github.com/fdila/rosserial_stm32f7)
+* [Hello World example](https://dev.azure.com/stevenfarthenDev/_git/HelloWorld) is a copy of [ROSserial chatter](https://github.com/yoneken/rosserial_stm32/tree/master/src/ros_lib/examples/chatter) but reconfigured to be directly used by [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html).
+
+* [LEDs control through publishers example](https://stevenfarthenDev@dev.azure.com/stevenfarthenDev/BlinkingLED/_git/BlinkingLED)Send UART rosserial commands controlling LED blinking time. Configured for ST NUCLEO-F401RE.
+
+* [A simple temperature and pressure example](https://stevenfarthenDev@dev.azure.com/stevenfarthenDev/X_NUCLEO_IKS01A2_Shield/_git/X_NUCLEO_IKS01A2_Shield) Gather temperature & pressure data and publish them to ROS python client using ST [X-NUCLEO-IKS01A2](https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-sense-hw/x-nucleo-iks01a2.html) shield.
+
+* [Motion and environment multi-publisher sensing example](https://stevenfarthenDev@dev.azure.com/stevenfarthenDev/ROS-X-NUCLEO-IKS01A2/_git/ROS-X-NUCLEO-IKS01A2)
+This project is a multi-nodes publishers example with both environment (Pressure, humidity, temperature) and motion (magnetic, accelerometer, 6DOF inertia) sensing. It has been tested on [[NUCLEO-F401RE](https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html) top up with [X-NUCLEO-IKS01A2](https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-sense-hw/x-nucleo-iks01a2.html) shield. It also shows how a C++ wrapper could be used to be integrated into a C demonstration code.
 
 ## On a Windows machine with virtual machine
 ### Note
