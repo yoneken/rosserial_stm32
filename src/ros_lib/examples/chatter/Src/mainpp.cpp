@@ -31,7 +31,11 @@ void setup(void)
 
 void loop(void)
 {
+#ifdef STM32F4xx
+  HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+#ifdef STM32F3xx
   HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_3);
+#endif
 
   str_msg.data = hello;
   chatter.publish(&str_msg);
