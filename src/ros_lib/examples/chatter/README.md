@@ -83,7 +83,8 @@ If your kit is not present within the list, you might need to edit the _ioc_ fil
 
 * Once your board is connected and programmed, you need to get the serial port using *dmesg* command
 
-rostopic echo LPS22HB_Pressure
+
+```
 dmesg | grep tty
 ```
 
