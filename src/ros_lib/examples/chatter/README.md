@@ -13,58 +13,57 @@ The example depends on folllowing packages and tools:
 
 To run this example, install prerequired dependencies.
 
-**ROS installation**
+### ROS installation
 
 Please, report to [ROS installation page](http://wiki.ros.org/melodic/Installation/Ubuntu)
 
-**STM32CubeIDE installation**
+### STM32CubeIDE installation
 
 * Download [STM32CubeIDE from ST website](https://www.st.com/en/development-tools/stm32cubeide.html)
 
 * From your download repository, open up a console and run below command to unzip the downloaded file
 
-'''
+```
 unzip {FILE_NAME.zip}
-'''
+```
 
 * Run the bash script with execution priviledge and follow installation instuctions.
 
-'''
+```
 chmod +x {FILE_NAME.sh}
 sh {FILE_NAME.sh}
-'''
+```
 
-*Note: Press 'Q' character to skip software compliance*
+***Note: Press 'Q' character to skip software compliance***
 
-**rosserial installation**
+### ROSserial installation
 
 From your console, run the following commands:
 
 
-'''
+```
 sudo apt update
 sudo apt-get install ros-melodic-rosserial
-'''
+```
 **Note: Replace _melodic_ by your ROS distribution**
 
-**rosserial_stm32 installation**
+### ROSserial_stm32 installation
 
 * Clone [rosserial_stm32](https://github.com/yoneken/rosserial_stm32) repository:
-'''
+```
 git clone https://github.com/yoneken/rosserial_stm32
-'''
+```
 
 * Build the project
-'''
+```
 make install
-'''
+```
 
 * Copy package path folder to your ROS setup
-'''
-echo "[ABSOLUT_PATH_TO_ROSSERIAL_STM32_FOLDER]/rosserial_stm32/src/rosserial_stm32
-" >> ~/.bashrc
+```
+echo "[ABSOLUT_PATH_TO_ROSSERIAL_STM32_FOLDER]/rosserial_stm32/src/rosserial_stm32" >> ~/.bashrc
 source ~/.bashrc
-'''
+```
 
 ## Target your board
 
@@ -84,7 +83,7 @@ If your kit is not present within the list, you might need to edit the _ioc_ fil
 
 * Once your board is connected and programmed, you need to get the serial port using *dmesg* command
 
-```
+rostopic echo LPS22HB_Pressure
 dmesg | grep tty
 ```
 
