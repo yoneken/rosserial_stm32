@@ -1,0 +1,15 @@
+time.h:51:3:ros::Time::Time()	16	static
+STM32Hardware.h:125:19:long unsigned int STM32Hardware::time()	16	static
+lsm303agr_rosService.h:39:34:sensor_msgs::MagneticField* LSM303AGR_rosService::LSM303AGR_magnetic_field_t()	32	static
+lsm303agr_rosService.h:50:35:geometry_msgs::AccelStamped* LSM303AGR_rosService::LSM303AGR_acceleration_t()	32	static
+lsm303agr_rosWrapper.cpp:17:10:uint32_t new_C_LSM303AGR_rosService()	8	static
+lsm303agr_rosWrapper.cpp:29:6:void del_C_LSM303AGR_rosService()	8	static
+lsm303agr_rosWrapper.cpp:43:9:int32_t LSM303AGR_RosAdvertize(LSM303AGR_Capabilities_t*)	16	static
+lsm303agr_rosWrapper.cpp:57:18:LSM303AGR_Axes_t LSM303AGR_RosGetMagneticField(LSM303AGR_MAG_Object_t*)	24	static
+lsm303agr_rosWrapper.cpp:71:6:void LSM303AGR_RosSetMagneticField(LSM303AGR_MAG_Object_t*, LSM303AGR_Axes_t*)	24	static
+lsm303agr_rosWrapper.cpp:81:18:LSM303AGR_Axes_t LSM303AGR_RosGetAcceleration(LSM303AGR_ACC_Object_t*)	32	static
+lsm303agr_rosWrapper.cpp:99:6:void LSM303AGR_RosSetAcceleration(LSM303AGR_ACC_Object_t*, LSM303AGR_Axes_t*)	24	static
+lsm303agr_rosWrapper.cpp:109:9:int32_t LSM303AGR_RosMagneticFieldPublish(LSM303AGR_MAG_Object_t*)	16	static
+lsm303agr_rosWrapper.cpp:119:9:int32_t LSM303AGR_RosAccelerationPublish(LSM303AGR_ACC_Object_t*)	16	static
+lsm303agr_rosWrapper.cpp:129:9:int32_t LSM303AGR_RosPublish(LSM303AGR_MAG_Object_t*, LSM303AGR_ACC_Object_t*)	24	static
+node_handle.h:394:8:ros::Time ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::now() [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 25; int MAX_PUBLISHERS = 25; int INPUT_SIZE = 512; int OUTPUT_SIZE = 512]	24	static

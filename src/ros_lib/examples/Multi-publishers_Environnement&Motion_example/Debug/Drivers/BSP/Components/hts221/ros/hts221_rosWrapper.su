@@ -1,0 +1,15 @@
+time.h:51:3:ros::Time::Time()	16	static
+STM32Hardware.h:125:19:long unsigned int STM32Hardware::time()	16	static
+hts221_rosService.h:38:32:sensor_msgs::Temperature* HTS221_rosService::HTS221_air_temperature_t()	32	static
+hts221_rosService.h:49:37:sensor_msgs::RelativeHumidity* HTS221_rosService::HTS221_air_humidity_t()	32	static
+hts221_rosWrapper.cpp:15:10:uint32_t new_C_HTS221_rosService()	8	static
+hts221_rosWrapper.cpp:27:6:void del_C_HTS221_rosService()	8	static
+hts221_rosWrapper.cpp:41:9:int32_t HTS221_RosAdvertize(HTS221_Capabilities_t*)	16	static
+hts221_rosWrapper.cpp:55:8:double HTS221_RosGetTemperature(HTS221_Object_t*)	24	static
+hts221_rosWrapper.cpp:65:6:void HTS221_RosSetTemperature(HTS221_Object_t*, double)	32	static
+hts221_rosWrapper.cpp:73:8:double HTS221_RosGetHumidity(HTS221_Object_t*)	24	static
+hts221_rosWrapper.cpp:83:6:void HTS221_RosSetHumidity(HTS221_Object_t*, double)	32	static
+hts221_rosWrapper.cpp:91:9:int32_t HTS221_RosTemperaturePublish(HTS221_Object_t*)	16	static
+hts221_rosWrapper.cpp:101:9:int32_t HTS221_RosHumidityPublish(HTS221_Object_t*)	16	static
+hts221_rosWrapper.cpp:111:9:int32_t HTS221_RosPublish(HTS221_Object_t*)	24	static
+node_handle.h:394:8:ros::Time ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::now() [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 25; int MAX_PUBLISHERS = 25; int INPUT_SIZE = 512; int OUTPUT_SIZE = 512]	24	static
