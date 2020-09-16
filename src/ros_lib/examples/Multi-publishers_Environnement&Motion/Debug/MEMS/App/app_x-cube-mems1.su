@@ -1,0 +1,12 @@
+app_x-cube-mems1.c:66:6:MX_MEMS_Init	8	static
+app_x-cube-mems1.c:88:6:MX_MEMS_Process	8	static
+app_x-cube-mems1.c:105:6:MX_IKS01A2_DataLogTerminal_Init	16	static
+app_x-cube-mems1.c:182:6:MX_IKS01A2_DataLogTerminal_Process	24	static
+app_x-cube-mems1.c:226:13:APP_X_MOTION_SENSOR_GetWhoAmI	16	static
+app_x-cube-mems1.c:250:13:APP_X_ENV_SENSOR_GetWhoAmI	16	static
+app_x-cube-mems1.c:273:13:Accelero_Sensor_Handler	32	static
+app_x-cube-mems1.c:331:13:Gyro_Sensor_Handler	32	static
+app_x-cube-mems1.c:392:13:Magneto_Sensor_Handler	32	static
+app_x-cube-mems1.c:453:13:Temp_Sensor_Handler	24	static
+app_x-cube-mems1.c:506:13:Press_Sensor_Handler	24	static
+app_x-cube-mems1.c:555:13:Hum_Sensor_Handler	24	static

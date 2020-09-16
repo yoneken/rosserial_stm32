@@ -1,0 +1,5 @@
+ROSserial_Cwrapper.cpp:13:17:C_ROSserial_t* new_C_ROSserial()	8	static
+ROSserial_Cwrapper.cpp:20:6:void del_C_ROSserial(C_ROSserial_t*)	16	static
+ROSserial_Cwrapper.cpp:25:9:uint8_t Reset_C_ROSserial(C_ROSserial_t*)	16	static
+ROSserial_Cwrapper.cpp:35:9:uint8_t Flush_C_ROSserial(C_ROSserial_t*)	16	static
+ROSserial_Cwrapper.cpp:45:6:void SpinOnce_C_ROSserial(C_ROSserial_t*)	16	static
