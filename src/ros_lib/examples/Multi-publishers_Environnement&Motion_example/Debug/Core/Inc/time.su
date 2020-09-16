@@ -1,4 +1,0 @@
-time.cpp:39:6:void ros::normalizeSecNSec(uint32_t&, uint32_t&)	24	static
-time.cpp:47:7:ros::Time& ros::Time::fromNSec(int32_t)	16	static
-time.cpp:55:7:ros::Time& ros::Time::operator+=(const ros::Duration&)	16	static
-time.cpp:63:7:ros::Time& ros::Time::operator-=(const ros::Duration&)	16	static
