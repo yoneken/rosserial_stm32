@@ -125,13 +125,13 @@ For channel 2 (second LED):
 ```
 rostopic pub channel2_led std_msgs/UInt16 9000 --once
 ```
-*The value manages LEDs duty cycle. It should be comprised between 0 (LED off) and 10000 (LED fully on)*
+**The value manages LEDs duty cycle. It should be comprised between 0 (LED off) and 9999 (LED fully on)**
 
 ## Outputs
 
 You should see the following console outputs:
 
-![Expected output](/Assets/outputs.png)
+![Expected output](Assets/outputs.png)
 
 ## License
 
