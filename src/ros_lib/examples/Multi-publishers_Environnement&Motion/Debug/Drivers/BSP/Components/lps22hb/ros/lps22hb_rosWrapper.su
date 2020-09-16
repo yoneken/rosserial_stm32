@@ -1,0 +1,15 @@
+time.h:51:3:ros::Time::Time()	16	static
+STM32Hardware.h:125:19:long unsigned int STM32Hardware::time()	16	static
+lps22hb_rosService.h:38:32:sensor_msgs::Temperature* LPS22HB_rosService::LPS22HB_air_temperature_t()	32	static
+lps22hb_rosService.h:49:34:sensor_msgs::FluidPressure* LPS22HB_rosService::LPS22HB_air_pressure_t()	32	static
+lps22hb_rosWrapper.cpp:16:10:uint32_t new_C_LPS22HB_rosService()	8	static
+lps22hb_rosWrapper.cpp:28:6:void del_C_LPS22HB_rosService()	8	static
+lps22hb_rosWrapper.cpp:42:9:int32_t LPS22HB_RosAdvertize(LPS22HB_Capabilities_t*)	16	static
+lps22hb_rosWrapper.cpp:56:8:double LPS22HB_RosGetTemperature(LPS22HB_Object_t*)	24	static
+lps22hb_rosWrapper.cpp:66:6:void LPS22HB_RosSetTemperature(LPS22HB_Object_t*, double)	32	static
+lps22hb_rosWrapper.cpp:74:8:double LPS22HB_RosGetPressure(LPS22HB_Object_t*)	24	static
+lps22hb_rosWrapper.cpp:84:6:void LPS22HB_RosSetPressure(LPS22HB_Object_t*, double)	32	static
+lps22hb_rosWrapper.cpp:92:9:int32_t LPS22HB_RosTemperaturePublish(LPS22HB_Object_t*)	16	static
+lps22hb_rosWrapper.cpp:102:9:int32_t LPS22HB_RosPressurePublish(LPS22HB_Object_t*)	16	static
+lps22hb_rosWrapper.cpp:112:9:int32_t LPS22HB_RosPublish(LPS22HB_Object_t*)	24	static
+node_handle.h:394:8:ros::Time ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::now() [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 25; int MAX_PUBLISHERS = 25; int INPUT_SIZE = 512; int OUTPUT_SIZE = 512]	24	static

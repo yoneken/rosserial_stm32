@@ -1,0 +1,39 @@
+time.h:51:3:ros::Time::Time()	16	static
+msg.h:45:7:constexpr ros::Msg::Msg()	16	static
+publisher.h:48:3:ros::Publisher::Publisher(const char*, ros::Msg*, int)	24	static
+publisher.h:53:7:int ros::Publisher::publish(const ros::Msg*)	16	static
+Vector3.h:22:5:geometry_msgs::Vector3::Vector3()	24	static
+Vector3.h:29:17:virtual int geometry_msgs::Vector3::serialize(unsigned char*) const	48	static
+Vector3.h:77:17:virtual int geometry_msgs::Vector3::deserialize(unsigned char*)	80	static
+Vector3.h:128:18:virtual const char* geometry_msgs::Vector3::getType()	16	static
+Vector3.h:129:18:virtual const char* geometry_msgs::Vector3::getMD5()	16	static
+Header.h:23:5:std_msgs::Header::Header()	16	static
+Header.h:30:17:virtual int std_msgs::Header::serialize(unsigned char*) const	24	static
+Header.h:56:17:virtual int std_msgs::Header::deserialize(unsigned char*)	32	static
+Header.h:86:18:virtual const char* std_msgs::Header::getType()	16	static
+Header.h:87:18:virtual const char* std_msgs::Header::getMD5()	16	static
+MagneticField.h:23:5:sensor_msgs::MagneticField::MagneticField()	16	static
+MagneticField.h:30:17:virtual int sensor_msgs::MagneticField::serialize(unsigned char*) const	40	static
+MagneticField.h:54:17:virtual int sensor_msgs::MagneticField::deserialize(unsigned char*)	56	static
+MagneticField.h:79:18:virtual const char* sensor_msgs::MagneticField::getType()	16	static
+MagneticField.h:80:18:virtual const char* sensor_msgs::MagneticField::getMD5()	16	static
+Accel.h:21:5:geometry_msgs::Accel::Accel()	16	static
+Accel.h:27:17:virtual int geometry_msgs::Accel::serialize(unsigned char*) const	24	static
+Accel.h:35:17:virtual int geometry_msgs::Accel::deserialize(unsigned char*)	24	static
+Accel.h:43:18:virtual const char* geometry_msgs::Accel::getType()	16	static
+Accel.h:44:18:virtual const char* geometry_msgs::Accel::getMD5()	16	static
+AccelStamped.h:22:5:geometry_msgs::AccelStamped::AccelStamped()	16	static
+AccelStamped.h:28:17:virtual int geometry_msgs::AccelStamped::serialize(unsigned char*) const	24	static
+AccelStamped.h:36:17:virtual int geometry_msgs::AccelStamped::deserialize(unsigned char*)	24	static
+AccelStamped.h:44:18:virtual const char* geometry_msgs::AccelStamped::getType()	16	static
+AccelStamped.h:45:18:virtual const char* geometry_msgs::AccelStamped::getMD5()	16	static
+lsm303agr_rosService.cpp:13:24:static LSM303AGR_rosService* LSM303AGR_rosService::getInstance()	16	static
+lsm303agr_rosService.cpp:23:1:LSM303AGR_rosService::LSM303AGR_rosService(const char*, sensor_msgs::MagneticField*, const char*, geometry_msgs::AccelStamped*)	24	static
+lsm303agr_rosService.cpp:39:1:LSM303AGR_rosService::LSM303AGR_rosService()	32	static
+lsm303agr_rosService.cpp:47:9:int32_t LSM303AGR_rosService::LSM303AGR_AdvertizeMagneticField()	16	static
+lsm303agr_rosService.cpp:63:9:int32_t LSM303AGR_rosService::LSM303AGR_AdvertizeAcceleration()	16	static
+lsm303agr_rosService.cpp:79:9:int32_t LSM303AGR_rosService::LSM303AGR_MagneticFieldPublish()	16	static
+lsm303agr_rosService.cpp:84:9:int32_t LSM303AGR_rosService::LSM303AGR_AccelerationPublish()	16	static
+msg.h:129:15:static void ros::Msg::varToArr(A, V) [with A = unsigned char*; V = long unsigned int]	24	static
+msg.h:137:15:static void ros::Msg::arrToVar(V&, A) [with V = long unsigned int; A = unsigned char*]	24	static
+node_handle.h:417:8:bool ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::advertise(ros::Publisher&) [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 25; int MAX_PUBLISHERS = 25; int INPUT_SIZE = 512; int OUTPUT_SIZE = 512]	24	static

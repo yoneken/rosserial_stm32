@@ -1,0 +1,29 @@
+time.h:51:3:ros::Time::Time()	16	static
+msg.h:45:7:constexpr ros::Msg::Msg()	16	static
+publisher.h:48:3:ros::Publisher::Publisher(const char*, ros::Msg*, int)	24	static
+publisher.h:53:7:int ros::Publisher::publish(const ros::Msg*)	16	static
+Header.h:23:5:std_msgs::Header::Header()	16	static
+Header.h:30:17:virtual int std_msgs::Header::serialize(unsigned char*) const	24	static
+Header.h:56:17:virtual int std_msgs::Header::deserialize(unsigned char*)	32	static
+Header.h:86:18:virtual const char* std_msgs::Header::getType()	16	static
+Header.h:87:18:virtual const char* std_msgs::Header::getMD5()	16	static
+Temperature.h:23:5:sensor_msgs::Temperature::Temperature()	24	static
+Temperature.h:30:17:virtual int sensor_msgs::Temperature::serialize(unsigned char*) const	48	static
+Temperature.h:65:17:virtual int sensor_msgs::Temperature::deserialize(unsigned char*)	80	static
+Temperature.h:102:18:virtual const char* sensor_msgs::Temperature::getType()	16	static
+Temperature.h:103:18:virtual const char* sensor_msgs::Temperature::getMD5()	16	static
+FluidPressure.h:23:5:sensor_msgs::FluidPressure::FluidPressure()	24	static
+FluidPressure.h:30:17:virtual int sensor_msgs::FluidPressure::serialize(unsigned char*) const	48	static
+FluidPressure.h:65:17:virtual int sensor_msgs::FluidPressure::deserialize(unsigned char*)	80	static
+FluidPressure.h:102:18:virtual const char* sensor_msgs::FluidPressure::getType()	16	static
+FluidPressure.h:103:18:virtual const char* sensor_msgs::FluidPressure::getMD5()	16	static
+lps22hb_rosService.cpp:13:22:static LPS22HB_rosService* LPS22HB_rosService::getInstance()	16	static
+lps22hb_rosService.cpp:23:1:LPS22HB_rosService::LPS22HB_rosService(const char*, sensor_msgs::Temperature*, const char*, sensor_msgs::FluidPressure*)	24	static
+lps22hb_rosService.cpp:39:1:LPS22HB_rosService::LPS22HB_rosService()	32	static
+lps22hb_rosService.cpp:47:9:int32_t LPS22HB_rosService::LPS22HB_AdvertizeTemperature()	16	static
+lps22hb_rosService.cpp:63:9:int32_t LPS22HB_rosService::LPS22HB_AdvertizePressure()	16	static
+lps22hb_rosService.cpp:79:9:int32_t LPS22HB_rosService::LPS22HB_TemperaturePublish()	16	static
+lps22hb_rosService.cpp:84:9:int32_t LPS22HB_rosService::LPS22HB_PressurePublish()	16	static
+msg.h:129:15:static void ros::Msg::varToArr(A, V) [with A = unsigned char*; V = long unsigned int]	24	static
+msg.h:137:15:static void ros::Msg::arrToVar(V&, A) [with V = long unsigned int; A = unsigned char*]	24	static
+node_handle.h:417:8:bool ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::advertise(ros::Publisher&) [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 25; int MAX_PUBLISHERS = 25; int INPUT_SIZE = 512; int OUTPUT_SIZE = 512]	24	static
