@@ -111,7 +111,7 @@ rostopic echo LPS22HB_Air_Temperature
 ```
 You should get the following output :
 
-![expected output](/Assets/outputs.png)
+![expected output](Assets/outputs.png)
 
 ## DIVING INTO THE CODE
 
