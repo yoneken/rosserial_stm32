@@ -97,9 +97,16 @@ class STM32Hardware {
         mutex = true;
 
         if(twind != tfind){
-          uint16_t len = tfind < twind ? twind - tfind : tbuflen - tfind;
-          HAL_UART_Transmit_DMA(huart, &(tbuf[tfind]), len);
-          tfind = (tfind + len) & (tbuflen - 1);
+          uint16_t len = 0;
+		  if(tfind < twind){
+			len = twind - tfind;
+			HAL_UART_Transmit_DMA(huart, &(tbuf[tfind]), len);
+		  }else{
+			len = tbuflen - tfind;
+			HAL_UART_Transmit_DMA(huart, &(tbuf[tfind]), len);
+			HAL_UART_Transmit_DMA(huart, &(tbuf), twind);
+		  }
+          tfind = twind;
         }
         mutex = false;
       }
