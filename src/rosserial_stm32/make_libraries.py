@@ -42,6 +42,8 @@ It requires the location of your SWSTM32 project folder.
 rosrun rosserial_stm32 make_libraries.py <output_path>
 """
 
+import os
+import sys
 import rospkg
 import rosserial_client
 from rosserial_client.make_library import *
@@ -70,26 +72,30 @@ ROS_TO_EMBEDDED_TYPES = {
 }
 
 # need correct inputs
-if (len(sys.argv) < 2):
-    print __usage__
-    exit()
+if len(sys.argv) < 2:
+    print(__usage__)
+    exit()    
     
 # get output path
 path = sys.argv[1]
 if path[-1] == "/":
     path = path[0:-1]
-print "\nExporting to %s" % path
+
+path += "/ros_lib/"
+print(f"Exporting to {path}")
 
 rospack = rospkg.RosPack()
 
 # copy ros_lib stuff in
 rosserial_stm32_dir = rospack.get_path(THIS_PACKAGE)
-files = os.listdir(rosserial_stm32_dir+"/src/ros_lib")
+files = os.listdir(rosserial_stm32_dir + "/src/ros_lib")
+
 for f in files:
-  if os.path.isfile(rosserial_stm32_dir+"/src/ros_lib/"+f):
-    shutil.copy(rosserial_stm32_dir+"/src/ros_lib/"+f, path+"/Inc/")
-rosserial_client_copy_files(rospack, path+"/Inc/")
+  if os.path.isfile(rosserial_stm32_dir + "/src/ros_lib/" + f):
+    shutil.copy(rosserial_stm32_dir + "/src/ros_lib/" + f, path)
+
+rosserial_client_copy_files(rospack, path)
 
 # generate messages
-rosserial_generate(rospack, path+"/Inc/", ROS_TO_EMBEDDED_TYPES)
+rosserial_generate(rospack, path, ROS_TO_EMBEDDED_TYPES)
 
