@@ -45,8 +45,9 @@ rosrun rosserial_stm32 make_libraries.py <output_path>
 import os
 import sys
 import rospkg
-import rosserial_client
+
 from rosserial_client.make_library import *
+from pathlib import Path
 
 # for copying files
 import shutil
@@ -84,6 +85,7 @@ if path[-1] == "/":
 path += "/ros_lib/"
 print(f"Exporting to {path}")
 
+Path(path).mkdir(parents=True, exist_ok=True)
 rospack = rospkg.RosPack()
 
 # copy ros_lib stuff in
