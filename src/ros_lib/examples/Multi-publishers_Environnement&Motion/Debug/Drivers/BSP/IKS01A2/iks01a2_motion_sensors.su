@@ -1,0 +1,14 @@
+iks01a2_motion_sensors.c:150:9:IKS01A2_MOTION_SENSOR_Init	64	static
+iks01a2_motion_sensors.c:615:9:IKS01A2_MOTION_SENSOR_DeInit	24	static
+iks01a2_motion_sensors.c:641:9:IKS01A2_MOTION_SENSOR_GetCapabilities	24	static
+iks01a2_motion_sensors.c:667:9:IKS01A2_MOTION_SENSOR_ReadID	24	static
+iks01a2_motion_sensors.c:696:9:IKS01A2_MOTION_SENSOR_Enable	24	static
+iks01a2_motion_sensors.c:735:9:IKS01A2_MOTION_SENSOR_Disable	24	static
+iks01a2_motion_sensors.c:775:9:IKS01A2_MOTION_SENSOR_GetAxes	32	static
+iks01a2_motion_sensors.c:815:9:IKS01A2_MOTION_SENSOR_GetAxesRaw	32	static
+iks01a2_motion_sensors.c:855:9:IKS01A2_MOTION_SENSOR_GetSensitivity	32	static
+iks01a2_motion_sensors.c:896:9:IKS01A2_MOTION_SENSOR_GetOutputDataRate	32	static
+iks01a2_motion_sensors.c:936:9:IKS01A2_MOTION_SENSOR_GetFullScale	32	static
+iks01a2_motion_sensors.c:977:9:IKS01A2_MOTION_SENSOR_SetOutputDataRate	32	static
+iks01a2_motion_sensors.c:1017:9:IKS01A2_MOTION_SENSOR_SetFullScale	32	static
+iks01a2_motion_sensors.c:1061:16:LSM6DSL_0_Probe	80	static

@@ -1,0 +1,12 @@
+time.h:51:3:ros::Time::Time()	16	static
+STM32Hardware.h:125:19:long unsigned int STM32Hardware::time()	16	static
+lsm6dsl_rosService.h:34:24:sensor_msgs::Imu* LSM6DSL_rosService::LSM6DSL_imu_t()	32	static
+lsm6dsl_rosWrapper.cpp:17:10:uint32_t new_C_LSM6DSL_rosService()	8	static
+lsm6dsl_rosWrapper.cpp:29:6:void del_C_LSM6DSL_rosService()	8	static
+lsm6dsl_rosWrapper.cpp:43:9:int32_t LSM6DSL_RosAdvertize(LSM6DSL_Capabilities_t*)	16	static
+lsm6dsl_rosWrapper.cpp:56:16:LSM6DSL_Axes_t LSM6DSL_RosGetAcceleration(LSM6DSL_Object_t*)	24	static
+lsm6dsl_rosWrapper.cpp:70:6:void LSM6DSL_RosSetAcceleration(LSM6DSL_Object_t*, LSM6DSL_Axes_t*)	24	static
+lsm6dsl_rosWrapper.cpp:80:16:LSM6DSL_Axes_t LSM6DSL_RosGetGyroscope(LSM6DSL_Object_t*)	24	static
+lsm6dsl_rosWrapper.cpp:94:6:void LSM6DSL_RosSetGyroscope(LSM6DSL_Object_t*, LSM6DSL_Axes_t*)	24	static
+lsm6dsl_rosWrapper.cpp:104:9:int32_t LSM6DSL_RosImuPublish(LSM6DSL_Object_t*)	16	static
+node_handle.h:394:8:ros::Time ros::NodeHandle_<Hardware, MAX_SUBSCRIBERS, MAX_PUBLISHERS, INPUT_SIZE, OUTPUT_SIZE>::now() [with Hardware = STM32Hardware; int MAX_SUBSCRIBERS = 25; int MAX_PUBLISHERS = 25; int INPUT_SIZE = 512; int OUTPUT_SIZE = 512]	24	static
