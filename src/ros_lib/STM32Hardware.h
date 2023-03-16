@@ -104,7 +104,7 @@ class STM32Hardware {
 		  }else{
 			len = tbuflen - tfind;
 			HAL_UART_Transmit_DMA(huart, &(tbuf[tfind]), len);
-			HAL_UART_Transmit_DMA(huart, &(tbuf), twind);
+			HAL_UART_Transmit_DMA(huart, &(tbuf[0]), twind);
 		  }
           tfind = twind;
         }
